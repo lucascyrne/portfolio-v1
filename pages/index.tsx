@@ -11,6 +11,10 @@ import ServiceCard from '../components/ServiceCard';
 const About: NextPage = () => {
   return (
     <motion.div variants={routeAnimation} initial="initial" animate="animate" exit="exit" className="flex flex-grow flex-col px-6 pt-1">
+      <Head>
+        <title>Web Developer | Portfolio</title>
+      </Head>
+
       <motion.h5 variants={fadeInUp} className="my-3 font-medium text-sm">
         I am currently pursuing B.Tech Degree (Final Year) in Computer
         Science Engineering from Academy of Technology. I have 3+ years of

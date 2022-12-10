@@ -4,10 +4,15 @@ import Navbar from "../components/Navbar";
 import { fadeInUp, routeAnimation } from '../animations';
 import { languages, tools } from "../data";
 import { NextPage } from "next";
+import Head from "next/head";
 
 const Resume: NextPage = () => {
     return (
         <motion.div variants={routeAnimation} initial="initial" animate="animate" exit="exit" className="px-6 py-2">
+            <Head>
+                <title>Web Developer | Resume</title>
+            </Head>
+
             {/* education & exp */}
             <div className="grid gap-6 md:grid-cols-2">
                 <motion.div variants={fadeInUp} initial="initial" animate="animate">

@@ -6,6 +6,7 @@ import ProjectCard from "../components/ProjectCard";
 import ProjectNavbar from "../components/ProjectNavbar";
 import { fadeInUp, routeAnimation, stagger } from "../animations";
 import { NextPage } from "next";
+import Head from "next/head";
 
 const Projects: NextPage = () => {
 	const [active, setActive] = useState("all");
@@ -26,6 +27,10 @@ const Projects: NextPage = () => {
 
 	return (
 		<motion.div variants={routeAnimation} initial="initial" animate="animate" exit="exit" className="px-5 py-2 overflow-y-scroll" style={{ height: "65vh" }}>
+			<Head>
+				<title>Web Developer | Projects</title>
+			</Head>
+
 			<ProjectNavbar handlerFilterCategory={handlerFilterCategory} active={active} />
 			<motion.div className="relative grid grid-cols-12 gap-4 my-3"
 				variants={stagger}
