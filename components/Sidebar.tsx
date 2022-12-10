@@ -1,7 +1,8 @@
-import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai"
-import { GoLocation } from "react-icons/go";
-import { GiTie } from "react-icons/gi";
+import Image from "next/image";
 import { useTheme } from "next-themes";
+import { GiTie } from "react-icons/gi";
+import { GoLocation } from "react-icons/go";
+import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai"
 
 const Sidebar = () => {
     const { theme, setTheme } = useTheme();
@@ -12,15 +13,18 @@ const Sidebar = () => {
 
     return (
         <div>
-            <img src="https://pbs.twimg.com/profile_images/1593299186572836864/ko7JeoXk_400x400.jpg"
+            <Image src="https://pbs.twimg.com/profile_images/1593299186572836864/ko7JeoXk_400x400.jpg"
                 alt="A photo of me gently smiling"
+                width={"100"}
+                height={"100"}
+                quality="100"
                 className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan"><span className="text-green-400">Lucas</span> Cyrne</h3>
             <p className="px-2 py-1 my-3 bg-gray-200 dark:bg-dark-700 rounded-full text-sm">Full-stack Developer</p>
             <a
-                className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 dark:bg-dark-700 text-sm rounded-full"
-                href=""
-                download="name"
+                className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 dark:bg-dark-700 text-sm rounded-full cursor-pointer"
+                href="/images/blink.jpg"
+                download="blink.jpg"
             >
                 <GiTie className="w-6 h-6" /> Download resume</a>
             {/* Social Icons */}

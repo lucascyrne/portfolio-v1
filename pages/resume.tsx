@@ -1,13 +1,16 @@
 import Bar from "../components/Bar";
+import { motion } from 'framer-motion';
 import Navbar from "../components/Navbar";
+import { fadeInUp, routeAnimation } from '../animations';
 import { languages, tools } from "../data";
+import { NextPage } from "next";
 
-const resume = () => {
+const Resume: NextPage = () => {
     return (
-        <div className="px-6 py-2">
+        <motion.div variants={routeAnimation} initial="initial" animate="animate" exit="exit" className="px-6 py-2">
             {/* education & exp */}
             <div className="grid gap-6 md:grid-cols-2">
-                <div>
+                <motion.div variants={fadeInUp} initial="initial" animate="animate">
                     <h5 className="my-3 text-2xl font-bold">Education</h5>
                     <div>
                         <h5 className="my-2 text-xl font-bold text-md">Computer Science Engineering</h5>
@@ -17,17 +20,17 @@ const resume = () => {
                             Engineering from Academy of Technology
                         </p>
                     </div>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div variants={fadeInUp} initial="initial" animate="animate">
                     <h5 className="my-3 text-2xl font-bold">Experience</h5>
                     <div>
                         <h5 className="my-2 text-xl font-bold text-md">Software Engineer Jr.</h5>
                         <p className="font-semibold text-sm">Lucid Dreams, Lovecrypto, Novo Atacarejo</p>
                         <p className="my-3 text-sm">
-                            I don't know why I am doing this job
+                            I don&apos;t know why I am doing this job
                         </p>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             {/* languages & tools */}
@@ -55,8 +58,8 @@ const resume = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
-export default resume;
+export default Resume;

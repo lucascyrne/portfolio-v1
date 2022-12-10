@@ -21,7 +21,7 @@ const ServiceCard: FC<{ service: IService }> = ({
 			<Icon className="w-12 h-12 text-green" />
 			<div>
 				<h4 className="font-bold">{title}</h4>
-				<p dangerouslySetInnerHTML={createMarkup()} />
+				<p dangerouslySetInnerHTML={createMarkup()} className="text-sm" />
 			</div>
 		</div>
 	)
